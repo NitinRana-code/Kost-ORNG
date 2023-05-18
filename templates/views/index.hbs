@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="ms-0">
     {{>navbar}}
-    <main class="foo d-flex flex-row">
+    <main>
         {{>sidebars}}
 
-        <div class="container" style="margin-left:2em">
+        <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "0px";
+            document.getElementById("main").style.marginLeft="2em"
+            document.getElementById("open").style.display="block"
+        }
+    </script>
+
+        <div class="main-container" style="margin-left:18em" id="main">
 
             this is index page
         </div>
