@@ -4,10 +4,11 @@
   overflow-x: hidden;
   overflow-y: scroll;
   position: fixed;
-  height: 90vh;
+  height: 95vh;
   padding: 0px;
   margin: 0;
   left: 0;
+  transition: 0.4s;
 }
 
 .collapsible-header {

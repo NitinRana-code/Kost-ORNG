@@ -1,28 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body class="ms-0">
     {{>navbar}}
-    <main>
+    <div style="position: relative; top:55px">
         {{>sidebars}}
 
-        <script>
-        function openSidebar() {
-            document.getElementById("sidebar").style.width = "0px";
-            document.getElementById("main").style.marginLeft="2em"
-            document.getElementById("open").style.display="block"
-        }
-    </script>
+        <div class="main-container d-flex flex-row p-3" style="margin-left: 18em;" id="main">
 
-        <div class="main-container" style="margin-left:18em" id="main">
+            {{!-- <div class="main">
+            </div> --}}
+            <div class="menubtn" style="height: 95vh; background-color:rgb(225, 225, 105)">
+                <button class="openSidebar" style="display:none; border:none; background-color:rgb(225, 225, 105)"
+                    id="menu" onclick="openSidebar()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-menu-button" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A1.5 1.5 0 0 1 1.5 0h8A1.5 1.5 0 0 1 11 1.5v2A1.5 1.5 0 0 1 9.5 5h-8A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-8z" />
+                        <path
+                            d="m7.823 2.823-.396-.396A.25.25 0 0 1 7.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="container p-0 d-flex flex-column">
 
-            this is index page
+                <div class="card-row d-flex flex-row">
+                    <div class="card w-50 m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
+
+                    <div class="card w-50 m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-row d-flex flex-row">
+                    <div class="card w-50 m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
+
+                    <div class="card w-50 m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </main>
+    </div>
 </body>
+
 </html>
