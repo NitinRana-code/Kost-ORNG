@@ -28,9 +28,11 @@ function closeSidebar() {
   document.getElementById("sidebar").style.width = "0px";
   document.getElementById("main").style.marginLeft = "0em";
   document.getElementById("menu").style.display = "block";
-  document.getElementById("menu").style.marginLeft = "3px";
+  document.getElementById("menu").style.opacity = "1"
+  // document.getElementById("menu").style.marginLeft = "3px";
 }
 function openSidebar() {
+  document.getElementById("menu").style.opacity = "0"
   document.getElementById("sidebar").style.width = "280px";
   document.getElementById("main").style.marginLeft = "18em";
   document.getElementById("menu").style.display = "none";
