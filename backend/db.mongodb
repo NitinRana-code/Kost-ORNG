@@ -4,29 +4,28 @@
 // Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 
 // Select the database to use.
-use('testDb');
+use('Kost');
 
 // The drop() command destroys all data from a collection.
 // Make sure you run it against the correct database and collection.
 // db.sales.drop();
 
 // Insert a few documents into the sales collection.
-// db.sales.insertMany([
-//   { '_id': 1, 'item': 'abc', 'price': 10, 'quantity': 2, 'date': new Date() },
-//   { '_id': 2, 'item': 'jkl', 'price': 20, 'quantity': 1, 'date': new Date() },
-//   { '_id': 3, 'item': 'xyz', 'price': 5, 'quantity': 10, 'date': new Date() },
-//   { '_id': 4, 'item': 'xyz', 'price': 5, 'quantity':  20, 'date': new Date() },
-//   { '_id': 5, 'item': 'abc', 'price': 10, 'quantity': 10, 'date': new Date() },
-//   { '_id': 6, 'item': 'def', 'price': 7.5, 'quantity': 5, 'date': new Date() },
-//   { '_id': 7, 'item': 'def', 'price': 7.5, 'quantity': 10, 'date': new Date() },
-//   { '_id': 8, 'item': 'abc', 'price': 10, 'quantity': 5, 'date': new Date() },
-// ]);
+db.apps.insertMany([
+  { '_id': 1, 'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+  { '_id': 2,'name': 'mail_api', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+  { '_id': 3,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+  { '_id': 4,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
+  { '_id': 5,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
+  { '_id': 6,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
+  { '_id': 7,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+  { '_id': 8,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+]);
 
 // Run a find command to view items sold on April 4th, 2014.
 // db.col.find();
 // db.col.find({name: "nitin"});
 db.col.findOne()
-db.col.
 
 // Build an aggregation to view total sales for each product in 2014.
 // const aggregation = [
