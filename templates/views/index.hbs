@@ -21,7 +21,7 @@
     <main style="position: relative; top:55px">
         {{>sidebars}}
 
-        <div class="main-container d-flex flex-row p-0" style="margin-left: 280px; overflow:scroll" id="main">
+        <div class="main-container d-flex flex-row p-0" style="margin-left: 280px; height:95vh; overflow:scroll" id="main">
 
             <div class="menuBtnO" style="height: 95vh; background-color:rgb(225, 225, 105)">
                 <button class="openSidebar pt-2"
@@ -30,6 +30,7 @@
                     <i class="fa-solid fa-bars fa-2xl"></i>
                 </button>
             </div>
+          
             <div class="container p-0 d-flex flex-column m-2">
 
                 {{!-- <div class="card-row d-flex flex-row">
@@ -236,11 +237,22 @@
                         </g>
                     </svg>
                 </div>
-
+                <div class="scan bg-light mt-1 mb-1 border" style="height: 140px;">
+                    <h3 class="bg-info">Code Scan</h3>
+                    <div class="data">
+                        {{!-- <img style="width: 100px; height: 100px"
+                            src="https://assets-eu-01.kc-usercontent.com/e1f3885c-805a-0150-804f-0996e00cd37d/afadf76d-420e-414d-acff-4a9efb344baa/SonarQubeIcon.svg?w=160&h=46&auto=format&fit=crop"
+                            alt=""> --}}
+                        <img class="me-2" style="width: 110px; height:30px" src="img/sonarqube-svgrepo-com.png" alt="">
+                        <img class="ms-2" style="height: 23px;" src="img/Checkmarx_logo.png" alt="">
+                    </div>
+                </div>
 
 
             </div>
         </div>
+    
+
 
     </main>
 </body>
