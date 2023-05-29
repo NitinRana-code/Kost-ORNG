@@ -11,21 +11,20 @@ use('Kost');
 // db.sales.drop();
 
 // Insert a few documents into the sales collection.
-db.apps.insertMany([
-  { '_id': 1, 'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
-  { '_id': 2,'name': 'mail_api', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
-  { '_id': 3,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
-  { '_id': 4,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
-  { '_id': 5,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
-  { '_id': 6,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
-  { '_id': 7,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
-  { '_id': 8,'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
-]);
+// db.apps.insertMany([
+//   { '_id': 1, 'name': 'application', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+//   { '_id': 2,'name': 'mail_api', 'domain': 'Corporate', 'app': 'Easymail', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+//   { '_id': 3,'name': 'Frontend', 'domain': 'Corporate', 'app': 'OLJ', 'build':['Angular'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+//   { '_id': 4,'name': 'Backend', 'domain': 'Corporate', 'app': 'OLJ', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
+//   { '_id': 5,'name': 'OBS-HR_Database', 'domain': 'Corporate', 'app': 'OBS-HR-DB', 'build':['Angular'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
+//   { '_id': 6,'name': 'OBSHRD-selfserviceAPI', 'domain': 'Corporate', 'app': 'OBS-HR-DB', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date()  },
+//   { '_id': 7,'name': 'DataProtectionAgreement', 'domain': 'Corporate', 'app': 'OBS-HR-DB', 'build':['python'],'code_scan':['sonar', 'checkmarx'], 'package':['docker'], 'date': new Date() },
+// ]);
 
 // Run a find command to view items sold on April 4th, 2014.
 // db.col.find();
 // db.col.find({name: "nitin"});
-db.col.findOne()
+db.apps.findOne()
 
 // Build an aggregation to view total sales for each product in 2014.
 // const aggregation = [

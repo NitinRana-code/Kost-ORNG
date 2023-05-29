@@ -21,7 +21,7 @@
     <main style="position: relative; top:55px">
         {{>sidebars}}
 
-        <div class="main-container d-flex flex-row p-0" style="margin-left: 280px; height:95vh; overflow:scroll" id="main">
+        <div class="main-container d-flex flex-row p-0" style="margin-left: 280px; height:95vh;" id="main">
 
             <div class="menuBtnO" style="height: 95vh; background-color:rgb(225, 225, 105)">
                 <button class="openSidebar pt-2"
@@ -30,8 +30,8 @@
                     <i class="fa-solid fa-bars fa-2xl"></i>
                 </button>
             </div>
-          
-            <div class="container p-0 d-flex flex-column m-2">
+
+            <div class="container p-0 d-flex flex-column m-2" style="width: 80vw; height:90vh; overflow:scroll">
 
                 {{!-- <div class="card-row d-flex flex-row">
                     <div class="card w-50 m-2">
@@ -93,6 +93,9 @@
                     <h3 class="bg-warning">Build</h3>
 
                     <div class="data d-flex flex-row ">
+                        {{#each data}}
+                        {{#ifCond build '==' "java"}}
+                        {{data.build}}
                         <svg class="me-5 opacity-25" width="64px" height="64px" viewBox="-118.513 4.399 540.906 540.906"
                             xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -122,6 +125,7 @@
                                     fill="#e76f00"></path>
                             </g>
                         </svg>
+                        {{else ifCond build '==' "python"}}
                         <svg class="me-5 opacity-25" width="64px" height="64px" viewBox="0 0 32 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -147,7 +151,7 @@
                                 </defs>
                             </g>
                         </svg>
-
+                        {{else}}
                         <svg class="me-5" width="64px" height="64px" viewBox="0 0 32 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -160,20 +164,37 @@
                                     fill="white"></path>
                             </g>
                         </svg>
+                        {{/ifCond}}
+                        {{/each}}
                     </div>
                 </div>
-                <div class="scan bg-light mt-1 mb-1 border" style="height: 140px;">
+                <div class="Scan bg-light mt-1 mb-1 border" style="height: 140px;">
                     <h3 class="bg-info">Code Scan</h3>
                     <div class="data">
                         {{!-- <img style="width: 100px; height: 100px"
                             src="https://assets-eu-01.kc-usercontent.com/e1f3885c-805a-0150-804f-0996e00cd37d/afadf76d-420e-414d-acff-4a9efb344baa/SonarQubeIcon.svg?w=160&h=46&auto=format&fit=crop"
                             alt=""> --}}
+                        {{#each data}}
+                        {{#each code_scan}}
+                        {{#ifCond this '==' "sonar"}}
                         <img class="me-2" style="width: 110px; height:30px" src="img/sonarqube-svgrepo-com.png" alt="">
+                        {{/ifCond}}
+                        {{/each}}
+                        {{/each}}
+
+                        {{#each data}}
+                        {{#each code_scan}}
+                        {{#ifCond this '==' "checkmarx"}}
                         <img class="ms-2" style="height: 23px;" src="img/Checkmarx_logo.png" alt="">
+                        {{/ifCond}}
+                        {{/each}}
+                        {{/each}}
                     </div>
                 </div>
-                <div class="package bg-light border mt-1 mb-1" style="height: 140px;">
+                <div class="Package bg-light border mt-1 mb-1" style="height: 140px;">
                     <h3 class="bg-success">Package</h3>
+                    {{#each data}}
+                    {{#ifEquals package "docker"}}
                     <svg width="84px" height="84px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
                         fill="#000000">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -236,6 +257,12 @@
                                 style="fill:#d5eef2"></path>
                         </g>
                     </svg>
+
+                    {{else}}
+                    <h1>no docker</h1>
+                    {{/ifEquals}}
+                    {{/each}}
+
                 </div>
                 <div class="scan bg-light mt-1 mb-1 border" style="height: 140px;">
                     <h3 class="bg-info">Code Scan</h3>
@@ -243,15 +270,43 @@
                         {{!-- <img style="width: 100px; height: 100px"
                             src="https://assets-eu-01.kc-usercontent.com/e1f3885c-805a-0150-804f-0996e00cd37d/afadf76d-420e-414d-acff-4a9efb344baa/SonarQubeIcon.svg?w=160&h=46&auto=format&fit=crop"
                             alt=""> --}}
+
+                        {{#each data}}
+                        {{#each code_scan}}
+                        {{#ifCond this '==' "sonar"}}
                         <img class="me-2" style="width: 110px; height:30px" src="img/sonarqube-svgrepo-com.png" alt="">
+                        {{/ifCond}}
+                        {{/each}}
+                        {{/each}}
+
+                        {{#each data}}
+                        {{#each code_scan}}
+                        {{#ifCond this '==' "checkmarx"}}
                         <img class="ms-2" style="height: 23px;" src="img/Checkmarx_logo.png" alt="">
+                        {{/ifCond}}
+                        {{/each}}
+                        {{/each}}
+
                     </div>
+
                 </div>
 
+                <div>test
+                    {{#each data}}
+                    {{#each code_scan}}
+                    {{#ifCond this '==' "sonar"}}
+                    sonar
+                    {{/ifCond}}
+                    {{/each}}
+                    {{/each}}
+
+                </div>
 
             </div>
+
+
         </div>
-    
+
 
 
     </main>
