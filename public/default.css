@@ -1,0 +1,7 @@
+body{
+    overflow: hidden;
+    position: relative;
+}
+#main{
+    transition: 0.4s;
+}

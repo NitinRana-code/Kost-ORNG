@@ -65,9 +65,10 @@ hbs.registerHelper('ifEquals', function(arg1, arg2, options) {
 hbs.registerPartials(partialPath);
 // routing
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("default");
 });
 
+// routing
 app.get("/apps/:proj/:app", (req, res) => {
   con.connect();
   const db = con.db("Kost");
